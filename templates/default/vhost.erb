@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+        ServerAdmin      <%= @ServerAdmin %>
+        DocumentRoot     /var/www/html/<%= @Website %>/www
+        ServerName       <%= @ServerName %>
+        ServerAlias      <%= @ServerAlias %>
+        DirectoryIndex   index.php
+
+        ErrorLog         logs/porc-errorlog
+        <Directory /var/www/html/<%= @Website %>/www>
+                Options       Indexes FollowSymlinks
+                AllowOverride All
+        </Directory>
+</VirtualHost>
+
