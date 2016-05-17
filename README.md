@@ -19,10 +19,12 @@ Amazon Linux - Will be adding more in time
     <td>String</td>
     <td>tar.gz file name from s3.</td>
     <td><tt>www.tar.gz</tt></td>
+  <tr>
     <td><tt>['s3_wordpress']['www']['install_files']</tt></td>
     <td>Boolean</td>
     <td>bool to pull new files from s3.</td>
     <td><tt>true</tt></td>
+  </tr>
     <td><tt>['s3_wordpress']['site']</tt></td>
     <td>String</td>
     <td>name of s3_wordpress site (also names directories).</td>
