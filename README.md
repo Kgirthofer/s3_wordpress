@@ -7,19 +7,64 @@ Pulls a sql dump and a tar.gz file from s3 (containing your /var/www/ files and 
 Amazon Linux - Will be adding more in time
 
 ## Attributes
-
-default['s3_wordpress']['s3']['archive'] - tar.gz file name from s3. Default www.tar.gz
-default['s3_wordpress']['www']['install_files'] - bool to pull new files from s3. Default true
-default['s3_wordpress']['site'] - name of s3_wordpress site (also names directories). Default test
-default['s3_wordpress']['s3']['bucket'] - name of base s3 bucket. Default will error. CHANGE REQUIRED
-default['s3_wordpress']['s3']['local_www_file'] - local file location. Defaults to /var/www/html/$site/$archive
-default['s3_wordpress']['sql']['import_sql'] - bool to import new sql dump from s3. Default true
-default['s3_wordpress']['sql']['database'] - name of database in mysql. Default test
-default['s3_wordpress']['sql']['database_file'] - name of database file. Default test.sql
-default['s3_wordpress']['sql']['database_host'] - name of database host (for wp-config.php). Default localhost
-default['s3_wordpress']['vhost']['server_admin'] - name of server admin for vhost. Default root@localhost
-default['s3_wordpress']['vhost']['server_name'] - apache server name. Default test.com
-default['s3_wordpress']['vhost']['server_alias'] - apache server alias. Default www.test.com
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['s3_wordpress']['s3']['archive']</tt></td>
+    <td>String</td>
+    <td>tar.gz file name from s3.</td>
+    <td><tt>www.tar.gz</tt></td>
+    <td><tt>['s3_wordpress']['www']['install_files']</tt></td>
+    <td>Boolean</td>
+    <td>bool to pull new files from s3.</td>
+    <td><tt>true</tt></td>
+    <td><tt>['s3_wordpress']['site']</tt></td>
+    <td>String</td>
+    <td>name of s3_wordpress site (also names directories).</td>
+    <td><tt>test</tt></td>
+    <td><tt>['s3_wordpress']['s3']['bucket']</tt></td>
+    <td>String</td>
+    <td>name of base s3 bucket.</td>
+    <td><tt>will error. CHANGE REQUIRED</tt></td>
+    <td><tt>['s3_wordpress']['s3']['local_www_file']</tt></td>
+    <td>String</td>
+    <td>local file location.</td>
+    <td><tt>s to /var/www/html/$site/$archive</tt></td>
+    <td><tt>['s3_wordpress']['sql']['import_sql']</tt></td>
+    <td>Boolean</td>
+    <td>bool to import new sql dump from s3.</td>
+    <td><tt>true</tt></td>
+    <td><tt>['s3_wordpress']['sql']['database']</tt></td>
+    <td>Stromg</td>
+    <td>name of database in mysql.</td>
+    <td><tt>test</tt></td>
+    <td><tt>['s3_wordpress']['sql']['database_file']</tt></td>
+    <td>String</td>
+    <td>name of database file.</td>
+    <td><tt>test.sql</tt></td>
+    <td><tt>['s3_wordpress']['sql']['database_host']</tt></td>
+    <td>String</td>
+    <td>name of database host (for wp-config.php).</td>
+    <td><tt>localhost</tt></td>
+    <td><tt>['s3_wordpress']['vhost']['server_admin']</tt></td>
+    <td>String</td>
+    <td>name of server admin for vhost.</td>
+    <td><tt>root@localhost</tt></td>
+    <td><tt>['s3_wordpress']['vhost']['server_name']</tt></td>
+    <td>String</td>
+    <td>apache server name.</td>
+    <td><tt>test.com</tt></td>
+    <td><tt>['s3_wordpress']['vhost']['server_alias']</tt></td>
+    <td>String</td>
+    <td>apache server alias.</td>
+    <td><tt>www.test.com</tt></td>
+  </tr>
+</table>
 
 ## Usage
 
